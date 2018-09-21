@@ -122,13 +122,16 @@ Fixpoint rev (l:natlist) : natlist :=
 Eval compute in 3 * 5.
 Eval compute in 3+5*6.
 
-Fixpoint factorial (n:nat) : nat := 
-  FILL_IN_HERE.
+Fixpoint factorial (n:nat) : nat :=
+  match n with
+  | 0 => 1
+  | S n' => n * (factorial n')
+  end.
 
 Example test_factorial1:          (factorial 3) = 6.
-Proof. exact FILL_IN_HERE. Qed.
+Proof. simpl. reflexivity. Qed.
 Example test_factorial2:          (factorial 5) = 10 * 12.
-Proof. exact FILL_IN_HERE. Qed.
+Proof. simpl. reflexivity. Qed.
 
 (*-- Check --*)
 
@@ -173,7 +176,7 @@ Theorem mult_S_1 : forall n m : nat,
   m = S n -> 
   m * (1 + n) = m * m.
 Proof.
-  exact FILL_IN_HERE.
+  intros. subst. auto.
 Qed.
 
 (*-- Check --*)
@@ -191,7 +194,7 @@ Check mult_S_1 : forall n m : nat,
 Theorem zero_nbeq_plus_1 : forall n : nat,
   beq_nat 0 (n + 1) = false.
 Proof.
-  exact FILL_IN_HERE.
+  destruct n; simpl; auto.
 Qed.
 
 (*-- Check --*)
@@ -210,7 +213,9 @@ Theorem negation_fn_applied_twice :
   (forall (x : bool), f x = negb x) ->
   forall (b : bool), f (f b) = b.
 Proof.
-  exact FILL_IN_HERE.
+  intros.
+  rewrite (H b). rewrite (H (negb b)).
+  destruct b; auto.
 Qed.
 
 (*-- Check --*)
@@ -224,8 +229,12 @@ Check negation_fn_applied_twice :
 
 Theorem plus_comm : forall n m : nat,
   n + m = m + n.
-Proof. 
-  exact FILL_IN_HERE.
+Proof.
+  induction n.
+  - intros. auto.
+  - intros.
+    rewrite plus_Sn_m.
+    rewrite <- plus_n_Sm. rewrite (IHn m). auto.
 Qed.
 
 (*-- Check --*)
