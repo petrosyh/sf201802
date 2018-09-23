@@ -149,14 +149,23 @@ Check
     yielding a [b]oolean.  Use [Fixpoint] to define it. *)
 
 Fixpoint blt_nat (n m : nat) : bool :=
-  FILL_IN_HERE.
+  match n with
+  | 0 => match m with
+        | 0 => false
+        | S m' => true
+        end
+  | S n' => match m with
+           | 0 => false
+           | S m' => blt_nat n' m'
+           end
+  end.
 
 Example test_blt_nat1:             (blt_nat 2 2) = false.
-Proof. exact FILL_IN_HERE. Qed.
+Proof. auto. Qed.
 Example test_blt_nat2:             (blt_nat 2 4) = true.
-Proof. exact FILL_IN_HERE. Qed.
+Proof. auto. Qed.
 Example test_blt_nat3:             (blt_nat 4 2) = false.
-Proof. exact FILL_IN_HERE. Qed.
+Proof. auto. Qed.
 
 (*-- Check --*)
 
@@ -246,8 +255,9 @@ Check plus_comm : forall n m : nat,
 
 Theorem plus_assoc : forall n m p : nat,
   n + (m + p) = (n + m) + p.
-Proof. 
-  exact FILL_IN_HERE.
+Proof.
+  induction n as [| n']; auto.
+  intros. simpl. apply eq_S. auto.
 Qed.
 
 (*-- Check --*)
@@ -265,7 +275,9 @@ Check plus_assoc : forall n m p : nat,
 
 Lemma double_plus : forall n, double n = n + n .
 Proof.  
-  exact FILL_IN_HERE.
+  induction n; auto.
+  simpl. rewrite IHn.
+  rewrite <- plus_n_Sm. auto.
 Qed.
 
 (*-- Check --*)
@@ -278,8 +290,10 @@ Check double_plus : forall n, double n = n + n .
 
 Theorem mult_plus_distr_r : forall n m p : nat,
   (n + m) * p = (n * p) + (m * p).
-Proof.  
-  exact FILL_IN_HERE.
+Proof.
+  induction n; auto.
+  simpl. intros. rewrite (IHn m p).
+  rewrite plus_assoc. auto.
 Qed.
 
 (*-- Check --*)
@@ -293,7 +307,8 @@ Check mult_plus_distr_r : forall n m p : nat,
 Theorem fst_swap_is_snd : forall (p : natprod),
   fst (swap_pair p) = snd p.
 Proof.  
-  exact FILL_IN_HERE.
+  unfold swap_pair. intros. destruct p.
+  simpl. auto.
 Qed.
 
 (*-- Check --*)
@@ -317,16 +332,22 @@ Check fst_swap_is_snd : forall (p : natprod),
     defining a new kind of pairs, but this is not the only way.)  *)
 
 Fixpoint alternate (l1 l2 : natlist) : natlist :=
-  FILL_IN_HERE.
+  match l1 with
+  | [] => l2
+  | hd1 :: tl1 => match l2 with
+                 | [] => hd1 :: tl1
+                 | hd2 :: tl2 => hd1 :: hd2 :: (alternate tl1 tl2)
+                 end
+  end.
 
 Example test_alternate1:        alternate [1;2;3] [4;5;6] = [1;4;2;5;3;6].
-Proof. exact FILL_IN_HERE. Qed.
+Proof. auto. Qed.
 Example test_alternate2:        alternate [1] [4;5;6] = [1;4;5;6].
-Proof. exact FILL_IN_HERE. Qed.
+Proof. auto. Qed.
 Example test_alternate3:        alternate [1;2;3] [4] = [1;4;2;3].
-Proof. exact FILL_IN_HERE. Qed.
+Proof. auto. Qed.
 Example test_alternate4:        alternate [] [20;30] = [20;30].
-Proof. exact FILL_IN_HERE. Qed.
+Proof. auto. Qed.
 
 (*-- Check --*)
 
@@ -349,8 +370,9 @@ alternate [] [20;30] = [20;30].
 Theorem app_nil_end : forall l : natlist, 
   l ++ [] = l.   
 Proof.
-  exact FILL_IN_HERE.
-Qed.  
+  induction l; auto.
+  simpl. rewrite IHl. auto.
+Qed.
 
 (*-- Check --*)
 Check app_nil_end : forall l : natlist, 
@@ -359,10 +381,21 @@ Check app_nil_end : forall l : natlist,
 (*=========== 3141592 ===========*)
 
 (** Hint: You may need to first state and prove some lemma about snoc and rev. *)
+
+Lemma aux1
+      l n
+  :
+    rev (snoc l n) = n :: (rev l).
+Proof.
+  induction l; auto.
+  simpl. rewrite IHl. simpl. auto.
+Qed.
+
 Theorem rev_involutive : forall l : natlist,
   rev (rev l) = l.
 Proof.
-  exact FILL_IN_HERE.
+  induction l; auto.
+  simpl. rewrite aux1. rewrite IHl. auto.
 Qed.
 
 (*-- Check --*)
@@ -375,7 +408,8 @@ Check rev_involutive : forall l : natlist,
 Theorem snoc_append : forall (l:natlist) (n:nat),
   snoc l n = l ++ [n].
 Proof.
-  exact FILL_IN_HERE.
+  induction l; auto.
+  intros. simpl. rewrite IHl. auto.
 Qed.
 
 (*-- Check --*)
@@ -385,10 +419,22 @@ Check snoc_append : forall (l:natlist) (n:nat),
 
 (*=========== 3141592 ===========*)
 
+Lemma aux2
+      l1 l2 n
+  :
+    snoc (l1 ++ l2) n = l1 ++ snoc (l2) n.
+Proof.
+  induction l1; auto.
+  simpl. rewrite IHl1. auto.
+Qed.
+
 Theorem distr_rev : forall l1 l2 : natlist,
   rev (l1 ++ l2) = (rev l2) ++ (rev l1).
 Proof.
-  exact FILL_IN_HERE.
+  induction l1; simpl.
+  - intros. rewrite app_nil_end. auto.
+  - intros. rewrite IHl1. rewrite aux2.
+    auto.
 Qed.
 
 (*-- Check --*)
