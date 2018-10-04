@@ -11,6 +11,8 @@ Theorem negation_fn_applied_twice :
   (forall (x : bool), f x = negb x) ->
   forall (b : bool), f (f b) = b.
 Proof.
-  exact FILL_IN_HERE.
+  intros.
+  rewrite (H b). rewrite (H (negb b)).
+  destruct b; auto.
 Qed.
 

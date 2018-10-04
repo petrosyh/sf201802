@@ -10,6 +10,8 @@ Require Export P07.
 
 Lemma double_plus : forall n, double n = n + n .
 Proof.  
-  exact FILL_IN_HERE.
+  induction n; auto.
+  simpl. rewrite IHn.
+  rewrite <- plus_n_Sm. auto.
 Qed.
 

@@ -6,6 +6,7 @@ Require Export P09.
 Theorem fst_swap_is_snd : forall (p : natprod),
   fst (swap_pair p) = snd p.
 Proof.  
-  exact FILL_IN_HERE.
+  unfold swap_pair. intros. destruct p.
+  simpl. auto.
 Qed.
 

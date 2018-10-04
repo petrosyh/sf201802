@@ -8,6 +8,6 @@ Require Export P11.
 Theorem app_nil_end : forall l : natlist, 
   l ++ [] = l.   
 Proof.
-  exact FILL_IN_HERE.
-Qed.  
-
+  induction l; auto.
+  simpl. rewrite IHl. auto.
+Qed.
