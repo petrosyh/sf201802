@@ -7,12 +7,16 @@ Require Export D.
     the list, or None if the list has no first element.
 *)
 
-Definition hd_error {X : Type} (l : list X) : option X := FILL_IN_HERE.
+Definition hd_error {X : Type} (l : list X) : option X :=
+  match l with
+  | nil => None
+  | hd :: tl => Some hd
+  end.
 
 Example test_hd_error1 : hd_error [1;2] = Some 1.
-Proof. exact FILL_IN_HERE. Qed.
+Proof. auto. Qed.
 Example test_hd_error2 : hd_error [[1];[2]] = Some [1].
-Proof. exact FILL_IN_HERE. Qed.
+Proof. auto. Qed.
 Example test_hd_error3 : @hd_error nat [] = None.
-Proof. exact FILL_IN_HERE. Qed.
+Proof. auto. Qed.
 

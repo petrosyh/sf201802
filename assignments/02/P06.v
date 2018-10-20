@@ -8,5 +8,14 @@ Require Export P05.
 Theorem nth_error_after_last: forall (n : nat) (X : Type) (l : list X),
      length l = n ->
      nth_error l n = None.
-Proof. exact FILL_IN_HERE. Qed.
+Proof. 
+intros n X l.
+revert n.
+induction l; auto.
+intros. induction n.
+-
+inversion H.
+-
+inversion H. rewrite H1. apply IHl in H1. simpl. auto.
+Qed.
 
