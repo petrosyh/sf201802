@@ -1,0 +1,15 @@
+DIGEST 062cb844239ebe7e082aaf4c9f20e9a1
+FAssignment.P07
+R15:17 Assignment.P06 <> <> lib
+def 80:91 <> and_exercise
+R110:112 Coq.Init.Datatypes <> nat ind
+R124:127 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R133:136 Coq.Init.Logic <> :type_scope:x_'/\'_x not
+R129:131 Coq.Init.Logic <> :type_scope:x_'='_x not
+R128:128 Assignment.P07 <> n var
+R138:140 Coq.Init.Logic <> :type_scope:x_'='_x not
+R137:137 Assignment.P07 <> m var
+R120:122 Coq.Init.Logic <> :type_scope:x_'='_x not
+R116:118 Coq.Init.Peano <> :nat_scope:x_'+'_x not
+R115:115 Assignment.P07 <> n var
+R119:119 Assignment.P07 <> m var

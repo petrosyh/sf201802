@@ -1,0 +1,23 @@
+DIGEST b15f3926c5301480fe658c309bf72365
+FAssignment.P14
+R15:17 Assignment.P13 <> <> lib
+prf 81:87 <> MUnion'
+R105:108 Assignment.D <> list ind
+R110:110 Assignment.P14 <> T var
+R125:131 Assignment.D <> reg_exp ind
+R133:133 Assignment.P14 <> T var
+R159:164 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R166:169 Assignment.D <> ::x_'=~'_x not
+R165:165 Assignment.P14 <> s var
+R170:174 Assignment.D <> Union constr
+R180:182 Assignment.P14 <> re2 var
+R176:178 Assignment.P14 <> re1 var
+R147:150 Coq.Init.Logic <> :type_scope:x_'\/'_x not
+R140:143 Assignment.D <> ::x_'=~'_x not
+R139:139 Assignment.P14 <> s var
+R144:146 Assignment.P14 <> re1 var
+R152:155 Assignment.D <> ::x_'=~'_x not
+R151:151 Assignment.P14 <> s var
+R156:158 Assignment.P14 <> re2 var
+R198:209 Assignment.D <> FILL_IN_HERE prfax
+R198:209 Assignment.D <> FILL_IN_HERE prfax

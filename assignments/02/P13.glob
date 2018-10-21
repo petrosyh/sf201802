@@ -1,0 +1,17 @@
+DIGEST bc372ed34076b348ba77afec545bf78b
+FAssignment.P13
+R15:17 Assignment.P12 <> <> lib
+prf 78:85 <> le_trans
+R109:112 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R119:122 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R124:127 Assignment.D <> ::x_'<='_x not
+R123:123 Assignment.P13 <> m var
+R128:128 Assignment.P13 <> o var
+R114:117 Assignment.D <> ::x_'<='_x not
+R113:113 Assignment.P13 <> n var
+R118:118 Assignment.P13 <> o var
+R104:107 Assignment.D <> ::x_'<='_x not
+R103:103 Assignment.P13 <> m var
+R108:108 Assignment.P13 <> n var
+R144:155 Assignment.D <> FILL_IN_HERE prfax
+R144:155 Assignment.D <> FILL_IN_HERE prfax

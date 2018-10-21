@@ -1,0 +1,12 @@
+DIGEST fe25a3bc0d9a85a78c07431dee89b870
+FAssignment.P08
+R15:17 Assignment.P07 <> <> lib
+prf 87:105 <> not_implies_our_not
+R131:135 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R159:159 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R154:157 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R158:158 Assignment.P08 <> Q var
+R153:153 Assignment.P08 <> P var
+R128:129 Coq.Init.Logic <> :type_scope:'~'_x not
+R130:130 Assignment.P08 <> P var
+R184:186 Coq.Init.Logic <> not def

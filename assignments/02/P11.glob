@@ -1,0 +1,13 @@
+DIGEST 0de00c2d7472e1b3bd8dae690efba8ff
+FAssignment.P11
+R15:17 Assignment.P10 <> <> lib
+prf 93:119 <> excluded_middle_irrefutable
+R141:142 Coq.Init.Logic <> :type_scope:'~'_x not
+R143:145 Coq.Init.Logic <> :type_scope:'~'_x not
+R154:154 Coq.Init.Logic <> :type_scope:'~'_x not
+R147:150 Coq.Init.Logic <> :type_scope:x_'\/'_x not
+R146:146 Assignment.P11 <> P var
+R151:152 Coq.Init.Logic <> :type_scope:'~'_x not
+R153:153 Assignment.P11 <> P var
+R170:181 Assignment.D <> FILL_IN_HERE prfax
+R170:181 Assignment.D <> FILL_IN_HERE prfax

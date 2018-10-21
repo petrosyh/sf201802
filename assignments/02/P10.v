@@ -1,8 +1,5 @@
 Require Export P09.
 
-Axiom functional_extensionality:
-forall A B (f g : A -> B), (forall x, f x = g x) -> f = g.
-
 Lemma list_assoc
   X (l1 l2 l3:list X)
 :
@@ -21,9 +18,9 @@ induction l1; auto.
 Qed.
 
 (** **** Problem #10 : 4 stars (tr_rev_correct) *)
-Lemma tr_rev_correct : forall X, @tr_rev X = @rev X.
+Lemma tr_rev_correct : forall X l, @tr_rev X l = @rev X l.
 Proof.
-intro. apply functional_extensionality. intros l.
+intro. intros l.
 induction l; auto. unfold tr_rev. simpl.
 assert (forall X (l1 l2:list X), rev_append l1 l2 = rev l1 ++ l2).
 { clear. intro X. induction l1; auto.

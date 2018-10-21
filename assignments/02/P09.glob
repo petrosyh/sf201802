@@ -1,0 +1,22 @@
+DIGEST b639a991f309365ab0bde2082604d37b
+FAssignment.P09
+R15:17 Assignment.P08 <> <> lib
+prf 76:85 <> In_app_iff
+R101:104 Assignment.D <> list ind
+R106:106 Assignment.P09 <> A var
+R113:116 Assignment.D <> list ind
+R118:118 Assignment.P09 <> A var
+R124:124 Assignment.P09 <> A var
+R142:146 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R130:131 Assignment.D <> In def
+R137:138 Assignment.D <> ::x_'++'_x not
+R136:136 Assignment.P09 <> l var
+R139:140 Assignment.P09 <> l' var
+R133:133 Assignment.P09 <> a var
+R153:156 Coq.Init.Logic <> :type_scope:x_'\/'_x not
+R147:148 Assignment.D <> In def
+R152:152 Assignment.P09 <> l var
+R150:150 Assignment.P09 <> a var
+R157:158 Assignment.D <> In def
+R162:163 Assignment.P09 <> l' var
+R160:160 Assignment.P09 <> a var

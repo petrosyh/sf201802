@@ -1,0 +1,26 @@
+DIGEST eafe81b6ad4f40efcc0a84115e341984
+FAssignment.P15
+R15:17 Assignment.P14 <> <> lib
+prf 228:233 <> MStar'
+R252:255 Assignment.D <> list ind
+R258:261 Assignment.D <> list ind
+R263:263 Assignment.P15 <> T var
+R273:279 Assignment.D <> reg_exp ind
+R285:285 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R314:320 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R335:338 Assignment.D <> ::x_'=~'_x not
+R321:324 Assignment.D <> fold def
+R333:334 Assignment.D <> ::'['_']' not
+R330:331 Assignment.P15 <> ss var
+R326:328 Assignment.D <> app def
+R339:342 Assignment.D <> Star constr
+R344:345 Assignment.P15 <> re var
+R303:306 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R308:311 Assignment.D <> ::x_'=~'_x not
+R307:307 Assignment.P15 <> s var
+R312:313 Assignment.P15 <> re var
+R296:297 Assignment.D <> In def
+R301:302 Assignment.P15 <> ss var
+R299:299 Assignment.P15 <> s var
+R361:372 Assignment.D <> FILL_IN_HERE prfax
+R361:372 Assignment.D <> FILL_IN_HERE prfax
