@@ -1,0 +1,19 @@
+DIGEST 7afde3464c68ef2bba817cc68af63c47
+FAssignment.P08
+R15:17 Assignment.P07 <> <> lib
+prf 77:90 <> sorted'_sorted
+R114:117 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R118:123 Assignment.D <> sorted ind
+R125:126 Assignment.P08 <> al var
+R104:110 Assignment.D <> sorted' def
+R112:113 Assignment.P08 <> al var
+R202:208 Assignment.D <> sorted' def
+R202:208 Assignment.D <> sorted' def
+R228:234 Assignment.D <> sorted' def
+R277:277 Coq.Init.Datatypes <> S constr
+R271:271 Coq.Init.Datatypes <> S constr
+R277:277 Coq.Init.Datatypes <> S constr
+R271:271 Coq.Init.Datatypes <> S constr
+R369:379 Assignment.D <> sorted_cons constr
+R369:379 Assignment.D <> sorted_cons constr
+R400:406 Assignment.D <> sorted' def

@@ -1,0 +1,24 @@
+DIGEST 1d81ecbff5df97eae388dafdbdd4d46b
+FAssignment.P07
+R15:17 Assignment.P06 <> <> lib
+prf 77:90 <> sorted_sorted'
+R113:116 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R117:123 Assignment.D <> sorted' def
+R125:126 Assignment.P07 <> al var
+R104:109 Assignment.D <> sorted ind
+R111:112 Assignment.P07 <> al var
+R162:168 Assignment.D <> sorted' def
+R205:211 Assignment.D <> sorted' def
+R264:270 Assignment.D <> sorted' def
+R300:308 Coq.Arith.Compare_dec <> le_lt_dec def
+R300:308 Coq.Arith.Compare_dec <> le_lt_dec def
+R691:694 Coq.Init.Peano <> :nat_scope:x_'<='_x not
+R755:755 Coq.Init.Datatypes <> S constr
+R762:764 Coq.Lists.List <> nth def
+R691:694 Coq.Init.Peano <> :nat_scope:x_'<='_x not
+R755:755 Coq.Init.Datatypes <> S constr
+R762:764 Coq.Lists.List <> nth def
+R851:851 Coq.Init.Datatypes <> S constr
+R851:851 Coq.Init.Datatypes <> S constr
+R953:964 Coq.Arith.PeanoNat Nat le_trans thm
+R953:964 Coq.Arith.PeanoNat Nat le_trans thm

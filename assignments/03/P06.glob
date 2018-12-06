@@ -1,0 +1,9 @@
+DIGEST a593cd5c1c1485536e85ae1bc722f6c4
+FAssignment.P06
+R15:17 Assignment.P05 <> <> lib
+prf 104:114 <> sort_sorted
+R127:132 Assignment.D <> sorted ind
+R135:138 Assignment.D <> sort def
+R140:140 Assignment.P06 <> l var
+R208:222 Assignment.P05 <> l_insert_sorted thm
+R208:222 Assignment.P05 <> l_insert_sorted thm

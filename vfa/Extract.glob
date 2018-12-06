@@ -1,0 +1,395 @@
+DIGEST 5fc2dde4180af8d2fd5d5d78ced9a35b
+FVFA.Extract
+R53:62 Coq.extraction.Extraction <> <> lib
+R629:632 VFA.Perm <> <> lib
+mod 643:647 <> Sort1
+def 659:664 Sort1 insert
+R669:671 Coq.Init.Datatypes <> nat ind
+R678:681 Coq.Init.Datatypes <> list ind
+R683:685 Coq.Init.Datatypes <> nat ind
+R700:700 VFA.Extract <> l var
+R711:713 Coq.Init.Datatypes <> nil constr
+R719:720 Coq.Init.Datatypes <> :list_scope:x_'::'_x not
+R718:718 VFA.Extract <> i var
+R721:723 Coq.Init.Datatypes <> nil constr
+R730:731 Coq.Init.Datatypes <> :list_scope:x_'::'_x not
+R741:745 Coq.Arith.PeanoNat <> :nat_scope:x_'<=?'_x not
+R740:740 VFA.Extract <> i var
+R767:770 Coq.Init.Datatypes <> :list_scope:x_'::'_x not
+R771:776 VFA.Extract <> insert def
+R778:778 VFA.Extract <> i var
+R754:755 Coq.Init.Datatypes <> :list_scope:x_'::'_x not
+R753:753 VFA.Extract <> i var
+R757:758 Coq.Init.Datatypes <> :list_scope:x_'::'_x not
+def 798:801 Sort1 sort
+R807:810 Coq.Init.Datatypes <> list ind
+R812:814 Coq.Init.Datatypes <> nat ind
+R819:822 Coq.Init.Datatypes <> list ind
+R824:826 Coq.Init.Datatypes <> nat ind
+R839:839 VFA.Extract <> l var
+R850:852 Coq.Init.Datatypes <> nil constr
+R857:859 Coq.Init.Datatypes <> nil constr
+R866:867 Coq.Init.Datatypes <> :list_scope:x_'::'_x not
+R873:878 VFA.Extract Sort1 insert def
+R883:886 VFA.Extract <> sort def
+R975:999 Coq.extraction.Extraction <> <> lib
+R1725:1728 Coq.Init.Datatypes <> bool ind
+R1778:1781 Coq.Init.Datatypes <> list ind
+R1843:1847 VFA.Extract Sort1 <> mod
+R3289:3294 Coq.ZArith.ZArith <> <> lib
+ax 4216:4218 <> int
+ax 4347:4349 <> ltb
+R4355:4358 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R4362:4365 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R4366:4369 Coq.Init.Datatypes <> bool ind
+R4359:4361 VFA.Extract <> int defax
+R4352:4354 VFA.Extract <> int defax
+ax 5087:5091 <> int2Z
+R5097:5100 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R5101:5101 Coq.Numbers.BinNums <> Z ind
+R5094:5096 VFA.Extract <> int defax
+ax 5112:5117 <> ltb_lt
+R5134:5136 VFA.Extract <> int defax
+R5153:5157 Coq.Init.Logic <> :type_scope:x_'<->'_x not
+R5146:5148 Coq.Init.Logic <> :type_scope:x_'='_x not
+R5139:5141 VFA.Extract <> ltb defax
+R5145:5145 VFA.Extract <> m var
+R5143:5143 VFA.Extract <> n var
+R5149:5152 Coq.Init.Datatypes <> true constr
+R5165:5167 Coq.ZArith.BinInt <> :Z_scope:x_'<'_x not
+R5158:5162 VFA.Extract <> int2Z defax
+R5164:5164 VFA.Extract <> n var
+R5168:5172 VFA.Extract <> int2Z defax
+R5174:5174 VFA.Extract <> m var
+prf 6418:6432 <> int_blt_reflect
+R6448:6454 Coq.Bool.Bool <> reflect ind
+R6477:6479 VFA.Extract <> ltb defax
+R6483:6483 VFA.Extract <> y var
+R6481:6481 VFA.Extract <> x var
+R6464:6466 Coq.ZArith.BinInt <> :Z_scope:x_'<'_x not
+R6457:6461 VFA.Extract <> int2Z defax
+R6463:6463 VFA.Extract <> x var
+R6467:6471 VFA.Extract <> int2Z defax
+R6473:6473 VFA.Extract <> y var
+R6516:6526 Coq.Bool.Bool <> iff_reflect thm
+R6516:6526 Coq.Bool.Bool <> iff_reflect thm
+R6545:6550 VFA.Extract <> ltb_lt prfax
+R6545:6550 VFA.Extract <> ltb_lt prfax
+prf 6565:6577 <> Z_eqb_reflect
+R6593:6599 Coq.Bool.Bool <> reflect ind
+R6608:6612 Coq.ZArith.BinInt Z eqb def
+R6616:6616 VFA.Extract <> y var
+R6614:6614 VFA.Extract <> x var
+R6603:6603 Coq.Init.Logic <> :type_scope:x_'='_x not
+R6602:6602 VFA.Extract <> x var
+R6604:6604 VFA.Extract <> y var
+R6649:6659 Coq.Bool.Bool <> iff_reflect thm
+R6649:6659 Coq.Bool.Bool <> iff_reflect thm
+R6678:6685 Coq.ZArith.BinInt Z eqb_eq thm
+R6678:6685 Coq.ZArith.BinInt Z eqb_eq thm
+prf 6700:6712 <> Z_ltb_reflect
+R6728:6734 Coq.Bool.Bool <> reflect ind
+R6743:6747 Coq.ZArith.BinInt Z ltb def
+R6751:6751 VFA.Extract <> y var
+R6749:6749 VFA.Extract <> x var
+R6738:6738 Coq.ZArith.BinInt <> :Z_scope:x_'<'_x not
+R6737:6737 VFA.Extract <> x var
+R6739:6739 VFA.Extract <> y var
+R6784:6794 Coq.Bool.Bool <> iff_reflect thm
+R6784:6794 Coq.Bool.Bool <> iff_reflect thm
+R6813:6820 Coq.ZArith.BinInt Z ltb_lt thm
+R6813:6820 Coq.ZArith.BinInt Z ltb_lt thm
+R7561:7594 Coq.Logic.FunctionalExtensionality <> <> lib
+mod 7605:7611 <> IntMaps
+def 7625:7633 IntMaps total_map
+R7648:7651 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R7652:7652 VFA.Extract <> A var
+R7647:7647 Coq.Numbers.BinNums <> Z ind
+def 7666:7672 IntMaps t_empty
+R7688:7688 VFA.Extract <> A var
+R7693:7701 VFA.Extract IntMaps total_map def
+R7703:7703 VFA.Extract <> A var
+R7719:7719 VFA.Extract <> v var
+def 7734:7741 IntMaps t_update
+R7757:7765 VFA.Extract IntMaps total_map def
+R7767:7767 VFA.Extract <> A var
+R7775:7775 Coq.Numbers.BinNums <> Z ind
+R7783:7783 VFA.Extract <> A var
+R7804:7808 Coq.ZArith.BinInt Z eqb def
+R7812:7813 VFA.Extract <> x' var
+R7810:7810 VFA.Extract <> x var
+R7827:7827 VFA.Extract <> m var
+R7829:7830 VFA.Extract <> x' var
+R7820:7820 VFA.Extract <> v var
+prf 7839:7849 IntMaps t_update_eq
+R7866:7874 VFA.Extract IntMaps total_map def
+R7876:7876 VFA.Extract <> A var
+R7902:7904 Coq.Init.Logic <> :type_scope:x_'='_x not
+R7885:7892 VFA.Extract IntMaps t_update def
+R7898:7898 VFA.Extract <> v var
+R7896:7896 VFA.Extract <> x var
+R7894:7894 VFA.Extract <> m var
+R7901:7901 VFA.Extract <> x var
+R7905:7905 VFA.Extract <> v var
+R7932:7939 VFA.Extract IntMaps t_update def
+R7956:7957 Coq.ZArith.BinInt <> :Z_scope:x_'=?'_x not
+R7956:7957 Coq.ZArith.BinInt <> :Z_scope:x_'=?'_x not
+prf 7992:8003 IntMaps t_update_neq
+R8036:8044 VFA.Extract IntMaps total_map def
+R8046:8046 VFA.Extract <> X var
+R8060:8064 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R8085:8087 Coq.Init.Logic <> :type_scope:x_'='_x not
+R8066:8073 VFA.Extract IntMaps t_update def
+R8080:8080 VFA.Extract <> v var
+R8077:8078 VFA.Extract <> x1 var
+R8075:8075 VFA.Extract <> m var
+R8083:8084 VFA.Extract <> x2 var
+R8088:8088 VFA.Extract <> m var
+R8090:8091 VFA.Extract <> x2 var
+R8054:8057 Coq.Init.Logic <> :type_scope:x_'<>'_x not
+R8052:8053 VFA.Extract <> x1 var
+R8058:8059 VFA.Extract <> x2 var
+R8118:8125 VFA.Extract IntMaps t_update def
+R8143:8144 Coq.ZArith.BinInt <> :Z_scope:x_'=?'_x not
+R8143:8144 Coq.ZArith.BinInt <> :Z_scope:x_'=?'_x not
+prf 8177:8191 IntMaps t_update_shadow
+R8208:8216 VFA.Extract IntMaps total_map def
+R8218:8218 VFA.Extract <> A var
+R8265:8268 Coq.Init.Logic <> :type_scope:x_'='_x not
+R8234:8241 VFA.Extract IntMaps t_update def
+R8263:8264 VFA.Extract <> v2 var
+R8261:8261 VFA.Extract <> x var
+R8244:8251 VFA.Extract IntMaps t_update def
+R8257:8258 VFA.Extract <> v1 var
+R8255:8255 VFA.Extract <> x var
+R8253:8253 VFA.Extract <> m var
+R8269:8276 VFA.Extract IntMaps t_update def
+R8282:8283 VFA.Extract <> v2 var
+R8280:8280 VFA.Extract <> x var
+R8278:8278 VFA.Extract <> m var
+R8310:8317 VFA.Extract IntMaps t_update def
+R8355:8356 Coq.ZArith.BinInt <> :Z_scope:x_'=?'_x not
+R8355:8356 Coq.ZArith.BinInt <> :Z_scope:x_'=?'_x not
+R8378:8384 VFA.Extract IntMaps <> mod
+mod 8528:8538 <> SearchTree2
+sec 8549:8553 SearchTree2 TREES
+var 8565:8565 SearchTree2.TREES V
+var 8584:8590 SearchTree2.TREES default
+R8593:8593 VFA.Extract <> SearchTree2.TREES.V var
+def 8608:8610 SearchTree2 key
+R8615:8617 VFA.Extract <> int defax
+ind 8631:8634 SearchTree2 tree
+constr 8649:8649 SearchTree2 E
+constr 8661:8661 SearchTree2 T
+R8653:8656 VFA.Extract <> tree ind
+R8668:8671 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R8675:8678 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R8680:8683 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R8688:8691 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R8692:8695 VFA.Extract <> tree ind
+R8684:8687 VFA.Extract <> tree ind
+R8679:8679 VFA.Extract <> SearchTree2.TREES.V var
+R8672:8674 VFA.Extract SearchTree2 key def
+R8664:8667 VFA.Extract <> tree ind
+def 8710:8719 SearchTree2 empty_tree
+R8723:8726 VFA.Extract SearchTree2 tree ind
+R8731:8731 VFA.Extract SearchTree2 E constr
+def 8744:8749 SearchTree2 lookup
+R8755:8757 VFA.Extract SearchTree2 key def
+R8765:8768 VFA.Extract SearchTree2 tree ind
+R8773:8773 VFA.Extract <> SearchTree2.TREES.V var
+R8786:8786 VFA.Extract <> t var
+R8797:8797 VFA.Extract SearchTree2 E constr
+R8802:8808 VFA.Extract <> SearchTree2.TREES.default var
+R8814:8814 VFA.Extract SearchTree2 T constr
+R8832:8834 VFA.Extract <> ltb defax
+R8836:8836 VFA.Extract <> x var
+R8891:8893 VFA.Extract <> ltb defax
+R8897:8897 VFA.Extract <> x var
+R8904:8909 VFA.Extract <> lookup def
+R8911:8911 VFA.Extract <> x var
+R8845:8850 VFA.Extract <> lookup def
+R8852:8852 VFA.Extract <> x var
+def 8965:8970 SearchTree2 insert
+R8976:8978 VFA.Extract SearchTree2 key def
+R8985:8985 VFA.Extract <> SearchTree2.TREES.V var
+R8992:8995 VFA.Extract SearchTree2 tree ind
+R9000:9003 VFA.Extract SearchTree2 tree ind
+R9015:9015 VFA.Extract <> s var
+R9026:9026 VFA.Extract SearchTree2 E constr
+R9031:9031 VFA.Extract SearchTree2 T constr
+R9039:9039 VFA.Extract SearchTree2 E constr
+R9037:9037 VFA.Extract <> v var
+R9035:9035 VFA.Extract <> x var
+R9033:9033 VFA.Extract SearchTree2 E constr
+R9044:9044 VFA.Extract SearchTree2 T constr
+R9062:9064 VFA.Extract <> ltb defax
+R9066:9066 VFA.Extract <> x var
+R9131:9133 VFA.Extract <> ltb defax
+R9137:9137 VFA.Extract <> x var
+R9197:9197 VFA.Extract SearchTree2 T constr
+R9203:9203 VFA.Extract <> v var
+R9201:9201 VFA.Extract <> x var
+R9144:9144 VFA.Extract SearchTree2 T constr
+R9154:9159 VFA.Extract <> insert def
+R9163:9163 VFA.Extract <> v var
+R9161:9161 VFA.Extract <> x var
+R9075:9075 VFA.Extract SearchTree2 T constr
+R9078:9083 VFA.Extract <> insert def
+R9087:9087 VFA.Extract <> v var
+R9085:9085 VFA.Extract <> x var
+def 9223:9231 SearchTree2 elements'
+R9237:9240 VFA.Extract SearchTree2 tree ind
+R9250:9253 Coq.Init.Datatypes <> list ind
+R9259:9259 Coq.Init.Datatypes <> :type_scope:x_'*'_x not
+R9256:9258 VFA.Extract SearchTree2 key def
+R9260:9260 VFA.Extract <> SearchTree2.TREES.V var
+R9266:9269 Coq.Init.Datatypes <> list ind
+R9275:9277 Coq.Init.Datatypes <> :type_scope:x_'*'_x not
+R9272:9274 VFA.Extract SearchTree2 key def
+R9278:9278 VFA.Extract <> SearchTree2.TREES.V var
+R9291:9291 VFA.Extract <> s var
+R9301:9301 VFA.Extract SearchTree2 E constr
+R9306:9309 VFA.Extract <> base var
+R9314:9314 VFA.Extract SearchTree2 T constr
+R9327:9335 VFA.Extract <> elements' def
+R9345:9348 Coq.Init.Datatypes <> :list_scope:x_'::'_x not
+R9340:9340 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R9342:9342 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R9344:9344 Coq.Init.Datatypes <> :core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R9349:9357 VFA.Extract <> elements' def
+R9361:9364 VFA.Extract <> base var
+def 9385:9392 SearchTree2 elements
+R9398:9401 VFA.Extract SearchTree2 tree ind
+R9406:9409 Coq.Init.Datatypes <> list ind
+R9415:9417 Coq.Init.Datatypes <> :type_scope:x_'*'_x not
+R9412:9414 VFA.Extract SearchTree2 key def
+R9418:9418 VFA.Extract <> SearchTree2.TREES.V var
+R9424:9432 VFA.Extract SearchTree2 elements' def
+R9436:9438 Coq.Init.Datatypes <> nil constr
+R9434:9434 VFA.Extract <> s var
+def 9453:9459 SearchTree2 combine
+R9473:9473 Coq.Numbers.BinNums <> Z ind
+R9484:9492 VFA.Extract IntMaps total_map def
+R9494:9494 VFA.Extract <> A var
+R9499:9507 VFA.Extract IntMaps total_map def
+R9509:9509 VFA.Extract <> A var
+R9528:9532 Coq.ZArith.BinInt Z ltb def
+R9536:9540 VFA.Extract <> pivot var
+R9534:9534 VFA.Extract <> x var
+R9558:9559 VFA.Extract <> m2 var
+R9561:9561 VFA.Extract <> x var
+R9548:9549 VFA.Extract <> m1 var
+R9551:9551 VFA.Extract <> x var
+ind 9575:9577 SearchTree2 Abs
+constr 9614:9618 SearchTree2 Abs_E
+constr 9647:9651 SearchTree2 Abs_T
+R9585:9588 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R9600:9603 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R9589:9597 VFA.Extract IntMaps total_map def
+R9599:9599 VFA.Extract <> SearchTree2.TREES.V var
+R9581:9584 VFA.Extract SearchTree2 tree ind
+R9621:9623 VFA.Extract <> Abs ind
+R9628:9634 VFA.Extract IntMaps t_empty def
+R9636:9642 VFA.Extract <> SearchTree2.TREES.default var
+R9625:9625 VFA.Extract SearchTree2 E constr
+R9687:9696 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R9704:9713 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R9714:9716 VFA.Extract <> Abs ind
+R9732:9739 VFA.Extract IntMaps t_update def
+R9775:9775 VFA.Extract <> v var
+R9766:9770 VFA.Extract <> int2Z defax
+R9772:9772 VFA.Extract <> k var
+R9742:9748 VFA.Extract SearchTree2 combine def
+R9762:9762 VFA.Extract <> b var
+R9760:9760 VFA.Extract <> a var
+R9751:9755 VFA.Extract <> int2Z defax
+R9757:9757 VFA.Extract <> k var
+R9719:9719 VFA.Extract SearchTree2 T constr
+R9727:9727 VFA.Extract <> r var
+R9725:9725 VFA.Extract <> v var
+R9723:9723 VFA.Extract <> k var
+R9721:9721 VFA.Extract <> l var
+R9697:9699 VFA.Extract <> Abs ind
+R9703:9703 VFA.Extract <> b var
+R9701:9701 VFA.Extract <> r var
+R9680:9682 VFA.Extract <> Abs ind
+R9686:9686 VFA.Extract <> a var
+R9684:9684 VFA.Extract <> l var
+prf 9788:9804 SearchTree2 empty_tree_relate
+R9807:9809 VFA.Extract SearchTree2 Abs ind
+R9823:9829 VFA.Extract IntMaps t_empty def
+R9831:9837 VFA.Extract <> SearchTree2.TREES.default var
+R9811:9820 VFA.Extract SearchTree2 empty_tree def
+prf 9922:9934 SearchTree2 lookup_relate
+R9967:9970 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R9981:9984 Coq.Init.Logic <> :type_scope:x_'='_x not
+R9971:9976 VFA.Extract SearchTree2 lookup def
+R9980:9980 VFA.Extract <> t var
+R9978:9978 VFA.Extract <> k var
+R9985:9987 VFA.Extract <> cts var
+R9990:9994 VFA.Extract <> int2Z defax
+R9996:9996 VFA.Extract <> k var
+R9958:9960 VFA.Extract SearchTree2 Abs ind
+R9964:9966 VFA.Extract <> cts var
+R9962:9962 VFA.Extract <> t var
+prf 10158:10170 SearchTree2 insert_relate
+R10205:10212 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R10213:10215 VFA.Extract SearchTree2 Abs ind
+R10233:10240 VFA.Extract IntMaps t_update def
+R10256:10256 VFA.Extract <> v var
+R10247:10251 VFA.Extract <> int2Z defax
+R10253:10253 VFA.Extract <> k var
+R10242:10244 VFA.Extract <> cts var
+R10218:10223 VFA.Extract SearchTree2 insert def
+R10229:10229 VFA.Extract <> t var
+R10227:10227 VFA.Extract <> v var
+R10225:10225 VFA.Extract <> k var
+R10196:10198 VFA.Extract SearchTree2 Abs ind
+R10202:10204 VFA.Extract <> cts var
+R10200:10200 VFA.Extract <> t var
+prf 10435:10467 SearchTree2 unrealistically_strong_can_relate
+R10482:10488 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R10492:10493 Coq.Init.Logic <> :type_scope:'exists'_x_'..'_x_','_x not
+R10494:10496 VFA.Extract SearchTree2 Abs ind
+R10500:10502 VFA.Extract <> cts var
+R10498:10498 VFA.Extract <> t var
+R10626:10630 VFA.Extract SearchTree2.TREES <> sec
+R11121:11131 VFA.Extract SearchTree2 <> mod
+R13607:13616 VFA.SearchTree <> <> lib
+mod 13626:13636 <> Experiments
+def 13672:13681 Experiments empty_tree
+R13686:13706 VFA.SearchTree <> empty_tree def
+R13708:13710 Coq.Init.Datatypes <> nat ind
+def 13724:13729 Experiments insert
+R13734:13750 VFA.SearchTree <> insert def
+R13752:13754 Coq.Init.Datatypes <> nat ind
+def 13768:13773 Experiments lookup
+R13778:13794 VFA.SearchTree <> lookup def
+R13796:13798 Coq.Init.Datatypes <> nat ind
+def 13814:13814 Experiments E
+R13819:13830 VFA.SearchTree <> E constr
+R13832:13834 Coq.Init.Datatypes <> nat ind
+def 13848:13848 Experiments T
+R13853:13864 VFA.SearchTree <> T constr
+R13866:13868 Coq.Init.Datatypes <> nat ind
+R13963:13966 Coq.Init.Logic <> :type_scope:x_'<>'_x not
+R13877:13882 VFA.Extract Experiments insert def
+R13889:13894 VFA.Extract Experiments insert def
+R13901:13906 VFA.Extract Experiments insert def
+R13913:13918 VFA.Extract Experiments insert def
+R13925:13930 VFA.Extract Experiments insert def
+R13937:13942 VFA.Extract Experiments insert def
+R13948:13957 VFA.Extract Experiments empty_tree def
+R13967:13967 VFA.Extract Experiments E def
+R13982:13982 VFA.Extract Experiments E def
+R13997:13997 VFA.Extract Experiments T def
+R13982:13982 VFA.Extract Experiments E def
+R13997:13997 VFA.Extract Experiments T def
+R13997:13997 VFA.Extract Experiments T def
+R13997:13997 VFA.Extract Experiments T def
+R13997:13997 VFA.Extract Experiments T def
+R13997:13997 VFA.Extract Experiments T def
+R13997:13997 VFA.Extract Experiments T def
+R13997:13997 VFA.Extract Experiments T def
+R14507:14517 VFA.Extract Experiments <> mod

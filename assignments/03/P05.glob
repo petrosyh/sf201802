@@ -1,0 +1,20 @@
+DIGEST 28157035fb278fa8377553416ac00d04
+FAssignment.P05
+R15:17 Assignment.P04 <> <> lib
+prf 243:257 <> l_insert_sorted
+R282:285 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R286:291 Assignment.D <> sorted ind
+R294:301 Assignment.D <> l_insert def
+R305:305 Assignment.P05 <> l var
+R303:303 Assignment.P05 <> a var
+R274:279 Assignment.D <> sorted ind
+R281:281 Assignment.P05 <> l var
+R379:381 Coq.Arith.PeanoNat <> :nat_scope:x_'<=?'_x not
+R379:381 Coq.Arith.PeanoNat <> :nat_scope:x_'<=?'_x not
+R467:469 Coq.Arith.PeanoNat <> :nat_scope:x_'<=?'_x not
+R467:469 Coq.Arith.PeanoNat <> :nat_scope:x_'<=?'_x not
+R493:503 Assignment.D <> sorted_cons constr
+R493:503 Assignment.D <> sorted_cons constr
+R493:503 Assignment.D <> sorted_cons constr
+R532:534 Coq.Arith.PeanoNat <> :nat_scope:x_'<=?'_x not
+R532:534 Coq.Arith.PeanoNat <> :nat_scope:x_'<=?'_x not

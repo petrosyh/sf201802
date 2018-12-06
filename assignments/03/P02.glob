@@ -1,0 +1,19 @@
+DIGEST feb33f354d205ebbc2100a09e172896f
+FAssignment.P02
+R15:17 Assignment.P01 <> <> lib
+R180:199 Coq.Sorting.Permutation <> Permutation_cons_inv thm
+R208:231 Coq.Sorting.Permutation <> Permutation_length_1_inv thm
+def 243:259 <> not_a_permutation
+R264:265 Coq.Init.Logic <> :type_scope:'~'_x not
+R266:276 Coq.Sorting.Permutation <> Permutation ind
+R284:284 Coq.Lists.List ListNotations :list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R286:286 Coq.Lists.List ListNotations :list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R288:288 Coq.Lists.List ListNotations :list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R278:278 Coq.Lists.List ListNotations :list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R280:280 Coq.Lists.List ListNotations :list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R282:282 Coq.Lists.List ListNotations :list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R305:307 Coq.Init.Logic <> not def
+R324:343 Coq.Sorting.Permutation <> Permutation_cons_inv thm
+R324:343 Coq.Sorting.Permutation <> Permutation_cons_inv thm
+R357:380 Coq.Sorting.Permutation <> Permutation_length_1_inv thm
+R357:380 Coq.Sorting.Permutation <> Permutation_length_1_inv thm

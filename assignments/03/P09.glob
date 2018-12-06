@@ -1,0 +1,42 @@
+DIGEST 7bb81a9b63b835f20afbb45b9eb4c896
+FAssignment.P09
+R15:17 Assignment.P08 <> <> lib
+prf 284:300 <> check_example_map
+R322:324 Assignment.D <> Abs ind
+R351:361 Assignment.D <> example_map def
+R369:370 Assignment.P09 <> v5 var
+R366:367 Assignment.P09 <> v4 var
+R363:364 Assignment.P09 <> v2 var
+R327:338 Assignment.D <> example_tree def
+R346:347 Assignment.P09 <> v5 var
+R343:344 Assignment.P09 <> v4 var
+R340:341 Assignment.P09 <> v2 var
+R400:411 Assignment.D <> example_tree def
+R425:433 Assignment.D <> total_map def
+R435:435 Assignment.D <> V defax
+R425:433 Assignment.D <> total_map def
+R435:435 Assignment.D <> V defax
+R450:460 Assignment.D <> example_map def
+R450:460 Assignment.D <> example_map def
+R540:550 Assignment.D <> example_map def
+R553:560 Assignment.D <> t_update def
+R563:569 Assignment.D <> combine def
+R572:578 Assignment.D <> t_empty def
+R595:596 Coq.Arith.PeanoNat <> :nat_scope:x_'=?'_x not
+R595:596 Coq.Arith.PeanoNat <> :nat_scope:x_'=?'_x not
+R641:642 Coq.Arith.PeanoNat <> :nat_scope:x_'<?'_x not
+R641:642 Coq.Arith.PeanoNat <> :nat_scope:x_'<?'_x not
+R665:666 Coq.Arith.PeanoNat <> :nat_scope:x_'=?'_x not
+R665:666 Coq.Arith.PeanoNat <> :nat_scope:x_'=?'_x not
+R712:713 Coq.Arith.PeanoNat <> :nat_scope:x_'<?'_x not
+R712:713 Coq.Arith.PeanoNat <> :nat_scope:x_'<?'_x not
+R738:739 Coq.Arith.PeanoNat <> :nat_scope:x_'=?'_x not
+R738:739 Coq.Arith.PeanoNat <> :nat_scope:x_'=?'_x not
+R804:805 Coq.Arith.PeanoNat <> :nat_scope:x_'=?'_x not
+R804:805 Coq.Arith.PeanoNat <> :nat_scope:x_'=?'_x not
+R864:865 Coq.Arith.PeanoNat <> :nat_scope:x_'=?'_x not
+R864:865 Coq.Arith.PeanoNat <> :nat_scope:x_'=?'_x not
+R894:895 Coq.Arith.PeanoNat <> :nat_scope:x_'<?'_x not
+R894:895 Coq.Arith.PeanoNat <> :nat_scope:x_'<?'_x not
+R935:936 Coq.Arith.PeanoNat <> :nat_scope:x_'=?'_x not
+R935:936 Coq.Arith.PeanoNat <> :nat_scope:x_'=?'_x not

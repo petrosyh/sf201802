@@ -9,6 +9,17 @@ Require Export P04.
 
 Lemma l_insert_sorted:
   forall a l, sorted l -> sorted (l_insert a l).
-Proof. exact FILL_IN_HERE. Qed.
+Proof.
+  induction 1.
+  - simpl. econstructor.
+  - simpl. bdestruct (a<=?x); econstructor; auto; try econstructor.
+    omega.
+  - simpl in *.
+    bdestruct (a<=?x).
+    + do 2 (eapply sorted_cons; eauto).
+    + bdestruct (a<=?y).
+      * econstructor; try omega. auto.
+      * econstructor; try omega. auto.
+Qed.
 
 

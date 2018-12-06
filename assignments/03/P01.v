@@ -14,6 +14,13 @@ Check app_assoc.
 
 Example permut_example: forall (a b: list nat),
   Permutation (5::6::a++b) ((5::b)++(6::a++[])).
-Proof. exact FILL_IN_HERE. Qed.
+Proof.
+  intros. simpl.
+  apply perm_skip. rewrite app_nil_r.
+  assert (6::a++b = [6]++a++b).
+  { simpl. auto. }
+  rewrite H. rewrite app_assoc.
+  eapply Permutation_app_comm with (l:= 6::a).
+Qed.
 
 

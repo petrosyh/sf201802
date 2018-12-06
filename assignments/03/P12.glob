@@ -1,0 +1,27 @@
+DIGEST d096a4e172546a4b8c3197296a0dba6f
+FAssignment.P12
+R15:17 Assignment.P11 <> <> lib
+prf 90:116 <> insert_SearchTree'_noexpand
+R144:154 Assignment.D <> SearchTree' ind
+R160:160 Assignment.P12 <> b var
+R158:158 Assignment.P12 <> t var
+R156:156 Assignment.P12 <> a var
+R178:181 Coq.Init.Peano <> :nat_scope:x_'<='_x_'<'_x not
+R183:185 Coq.Init.Peano <> :nat_scope:x_'<='_x_'<'_x not
+R177:177 Assignment.P12 <> a var
+R182:182 Assignment.P12 <> k var
+R182:182 Assignment.P12 <> k var
+R186:186 Assignment.P12 <> b var
+R194:204 Assignment.D <> SearchTree' ind
+R223:223 Assignment.P12 <> b var
+R209:214 Assignment.D <> insert def
+R220:220 Assignment.P12 <> t var
+R218:218 Assignment.P12 <> v var
+R216:216 Assignment.P12 <> k var
+R206:206 Assignment.P12 <> a var
+R420:421 Coq.Arith.PeanoNat <> :nat_scope:x_'<?'_x not
+R420:421 Coq.Arith.PeanoNat <> :nat_scope:x_'<?'_x not
+R520:521 Coq.Arith.PeanoNat <> :nat_scope:x_'<?'_x not
+R520:521 Coq.Arith.PeanoNat <> :nat_scope:x_'<?'_x not
+R608:610 Coq.Init.Logic <> :type_scope:x_'='_x not
+R608:610 Coq.Init.Logic <> :type_scope:x_'='_x not

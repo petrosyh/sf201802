@@ -468,8 +468,21 @@ intros.
 inv H.
 unfold balance.
 repeat match goal with
- | H: Abs E _ |- _ => inv H
-end.
+       | H: Abs E _ |- _ => inv H
+       | H: Abs (T _ _ _ _ _) _ |- _ => inv H
+       | H: SearchTree' _ E _ |- _ => inv H
+       | H: SearchTree' _ (T _ _ _ _ _) _ |- _ => inv H
+       | |- Abs match ?c with Red => _ | Black => _ end _ => destruct c
+       | |- Abs match ?s with E => _ | T _ _ _ _ _ => _ end _ => destruct s
+       | |- Abs (T _ _ _ _ _) _ => apply Abs_T
+       | |- Abs E _ => apply Abs_E
+       | |- _ => assumption
+       | |- _ =>  eapply Abs_helper; [repeat econstructor; eassumption | ]
+       | H: SearchTree' ?lo _ ?hi |- _ => apply SearchTree'_le in H
+       | _ => contents_equivalent_prover
+       end.
+Qed.
+
 (** Add these clauses, one at a time, to your [repeat match goal] tactic,
    and try it out:
    -1. Whenever a clause [H: Abs E _] is above the line, invert it by [inv H].

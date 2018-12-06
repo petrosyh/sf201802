@@ -11,6 +11,6 @@ Check Permutation_length_1_inv.
 
 Example not_a_permutation:
   ~ Permutation [1;1] [1;2].
-Proof. exact FILL_IN_HERE. Qed.
-
+Proof. unfold not. intros. apply Permutation_cons_inv in H.
+apply Permutation_length_1_inv in H. inv H. Qed.
 

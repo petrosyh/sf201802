@@ -1,0 +1,23 @@
+DIGEST 1bb909feb52e8bc111315b486011f243
+FAssignment.P04
+R15:17 Assignment.P03 <> <> lib
+prf 120:128 <> sort_perm
+R141:151 Coq.Sorting.Permutation <> Permutation ind
+R156:159 Assignment.D <> sort def
+R161:161 Assignment.P04 <> l var
+R153:153 Assignment.P04 <> l var
+R229:243 Coq.Sorting.Permutation <> Permutation_sym thm
+R229:243 Coq.Sorting.Permutation <> Permutation_sym thm
+R253:269 Coq.Sorting.Permutation <> Permutation_trans thm
+R253:269 Coq.Sorting.Permutation <> Permutation_trans thm
+R296:298 Coq.Init.Datatypes <> :list_scope:x_'::'_x not
+R305:305 Coq.Init.Datatypes <> :list_scope:x_'::'_x not
+R299:302 Assignment.D <> sort def
+R321:335 Coq.Sorting.Permutation <> Permutation_sym thm
+R321:335 Coq.Sorting.Permutation <> Permutation_sym thm
+R344:356 Assignment.P03 <> l_insert_perm thm
+R344:356 Assignment.P03 <> l_insert_perm thm
+R371:379 Coq.Sorting.Permutation <> perm_skip constr
+R371:379 Coq.Sorting.Permutation <> perm_skip constr
+R399:410 Assignment.D <> FILL_IN_HERE prfax
+R399:410 Assignment.D <> FILL_IN_HERE prfax

@@ -31,6 +31,22 @@ Theorem balance_relate:
     CSearchTree (CT c l k vk r) ->
     CAbs (CT c l k vk r) m ->
     CAbs (balance c l k vk r) m.
-Proof. exact FILL_IN_HERE. Qed.
-
-
+Proof.
+  intros.
+  inv H.
+  unfold balance.
+  repeat match goal with
+       | H: CAbs CE _ |- _ => inv H
+       | H: CAbs (CT _ _ _ _ _) _ |- _ => inv H
+       | H: CSearchTree' _ CE _ |- _ => inv H
+       | H: CSearchTree' _ (CT _ _ _ _ _) _ |- _ => inv H
+       | |- CAbs match ?c with Red => _ | Black => _ end _ => destruct c
+       | |- CAbs match ?s with CE => _ | CT _ _ _ _ _ => _ end _ => destruct s
+       | |- CAbs (CT _ _ _ _ _) _ => apply CAbs_T
+       | |- CAbs E _ => apply CAbs_E
+       | |- _ => assumption
+       | |- _ =>  eapply CAbs_helper; [repeat econstructor; eassumption | ]
+       | H: CSearchTree' ?lo _ ?hi |- _ => apply CSearchTree'_le in H
+       | _ => contents_equivalent_prover
+       end.
+Qed.

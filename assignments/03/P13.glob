@@ -1,0 +1,27 @@
+DIGEST 7383bea2fec69cfb6e4b6405c07eb68d
+FAssignment.P13
+R15:17 Assignment.P12 <> <> lib
+R81:97 Assignment.D <> SearchTree'_range thm
+R106:123 Assignment.D <> SearchTree'_expand thm
+prf 135:151 <> insert_SearchTree
+R185:188 Coq.Init.Logic <> :type_scope:x_'->'_x not
+R189:198 Assignment.D <> SearchTree ind
+R201:206 Assignment.D <> insert def
+R212:212 Assignment.P13 <> t var
+R210:210 Assignment.P13 <> v var
+R208:208 Assignment.P13 <> k var
+R173:182 Assignment.D <> SearchTree ind
+R184:184 Assignment.P13 <> t var
+R259:260 Coq.Init.Peano <> :nat_scope:x_'<='_x not
+R259:260 Coq.Init.Peano <> :nat_scope:x_'<='_x not
+R288:290 Coq.Arith.PeanoNat <> :nat_scope:x_'<?'_x not
+R288:290 Coq.Arith.PeanoNat <> :nat_scope:x_'<?'_x not
+R321:347 Assignment.P12 <> insert_SearchTree'_noexpand thm
+R321:347 Assignment.P12 <> insert_SearchTree'_noexpand thm
+R553:553 Coq.Init.Datatypes <> S constr
+R633:634 Coq.Arith.PeanoNat <> :nat_scope:x_'<?'_x not
+R633:634 Coq.Arith.PeanoNat <> :nat_scope:x_'<?'_x not
+R661:662 Coq.Arith.PeanoNat <> :nat_scope:x_'<?'_x not
+R661:662 Coq.Arith.PeanoNat <> :nat_scope:x_'<?'_x not
+R722:738 Assignment.D <> SearchTree'_range thm
+R722:738 Assignment.D <> SearchTree'_range thm

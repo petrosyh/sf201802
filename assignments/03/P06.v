@@ -6,6 +6,11 @@ Require Export P05.
 (** This one is easy.   *)
 
 Theorem sort_sorted: forall l, sorted (sort l).
-Proof. exact FILL_IN_HERE. Qed.
+Proof.
+  induction l.
+  - simpl. econstructor.
+  - simpl. apply l_insert_sorted. auto.
+Qed.
+
 
 

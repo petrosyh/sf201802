@@ -1,0 +1,23 @@
+DIGEST e6b1d68f1811d982e9e4d56282301bee
+FAssignment.P03
+R15:17 Assignment.P02 <> <> lib
+prf 338:350 <> l_insert_perm
+R365:375 Coq.Sorting.Permutation <> Permutation ind
+R385:392 Assignment.D <> l_insert def
+R396:396 Assignment.P03 <> l var
+R394:394 Assignment.P03 <> x var
+R379:380 Coq.Init.Datatypes <> :list_scope:x_'::'_x not
+R378:378 Assignment.P03 <> x var
+R381:381 Assignment.P03 <> l var
+R475:477 Coq.Arith.PeanoNat <> :nat_scope:x_'<=?'_x not
+R475:477 Coq.Arith.PeanoNat <> :nat_scope:x_'<=?'_x not
+R494:509 Coq.Sorting.Permutation <> Permutation_refl thm
+R494:509 Coq.Sorting.Permutation <> Permutation_refl thm
+R525:541 Coq.Sorting.Permutation <> Permutation_trans thm
+R525:541 Coq.Sorting.Permutation <> Permutation_trans thm
+R570:571 Coq.Init.Datatypes <> :list_scope:x_'::'_x not
+R573:574 Coq.Init.Datatypes <> :list_scope:x_'::'_x not
+R586:594 Coq.Sorting.Permutation <> perm_swap constr
+R586:594 Coq.Sorting.Permutation <> perm_swap constr
+R611:619 Coq.Sorting.Permutation <> perm_skip constr
+R611:619 Coq.Sorting.Permutation <> perm_skip constr

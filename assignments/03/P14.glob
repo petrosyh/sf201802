@@ -1,0 +1,6 @@
+DIGEST 4b7b74b820879fe9d6e5a53ad9805203
+FAssignment.P14
+R15:17 Assignment.P13 <> <> lib
+prf 59:88 <> empty_colored_tree_CSearchTree
+R91:101 Assignment.D <> CSearchTree ind
+R103:120 Assignment.D <> empty_colored_tree def
