@@ -94,22 +94,23 @@ Fixpoint lookup (x: key) (t : tree) : V :=
   so we don't care how many cases there are! *)
 
 Definition balance rb t1 k vk t2 :=
- match rb with Red => T Red t1 k vk t2
- | _ => 
- match t1 with 
- | T Red (T Red a x vx b) y vy c =>
+  match rb with
+  | Red => T Red t1 k vk t2
+  | _ => 
+    match t1 with 
+    | T Red (T Red a x vx b) y vy c =>
       T Red (T Black a x vx b) y vy (T Black c k vk t2)
- | T Red a x vx (T Red b y vy c) =>
+    | T Red a x vx (T Red b y vy c) =>
       T Red (T Black a x vx b) y vy (T Black c k vk t2)
- | a => match t2 with 
-            | T Red (T Red b y vy c) z vz d =>
-	        T Red (T Black t1 k vk b) y vy (T Black c z vz d)
-            | T Red b y vy (T Red c z vz d)  =>
-	        T Red (T Black t1 k vk b) y vy (T Black c z vz d)
-            | _ => T Black t1 k vk t2
-            end
-  end
- end.
+    | a => match t2 with 
+           | T Red (T Red b y vy c) z vz d =>
+	     T Red (T Black t1 k vk b) y vy (T Black c z vz d)
+           | T Red b y vy (T Red c z vz d)  =>
+	     T Red (T Black t1 k vk b) y vy (T Black c z vz d)
+           | _ => T Black t1 k vk t2
+           end
+    end
+  end.
 
 Definition makeBlack t := 
   match t with 
@@ -381,13 +382,34 @@ Lemma ins_SearchTree:
                     SearchTree' lo s hi ->
                     SearchTree' lo (ins x vx s) hi.
 Proof.
-(* FILL IN HERE *) Admitted.
+  intros. revert vx. induction H1.
+  - intros. repeat econstructor; omega.
+  - intros. simpl.
+    destruct (ltb x k) eqn:LTB1.
+    + eapply balance_SearchTree. eapply IHSearchTree'1; eauto.
+      rewrite ltb_lt in LTB1. auto.
+      eauto.
+    + destruct (ltb k x) eqn:LTB2.
+      rewrite ltb_lt in *.
+      * eapply balance_SearchTree; eauto.
+        eapply IHSearchTree'2; eauto. omega.
+      * assert (reflect (int2Z x < int2Z k) (ltb x k)) by eapply int_blt_reflect.
+        inv H1.
+        { rewrite <- H2 in LTB1. inv LTB1. }
+        rewrite Z.nlt_ge in H3.
+        assert (reflect (int2Z k < int2Z x) (ltb k x)) by eapply int_blt_reflect.
+        inv H1.
+        { rewrite <- H4 in LTB2. inv LTB2. }
+        rewrite Z.nlt_ge in H5.
+        assert (int2Z x = int2Z k) by omega. rewrite <- H1 in *.
+        econstructor; eauto. Qed.
 (** [] *)
 
 (** **** Exercise: 2 stars (valid)  *)
 
 Lemma empty_tree_SearchTree: SearchTree empty_tree.
-(* FILL IN HERE *) Admitted.
+Proof.
+  econstructor. instantiate (1:=0). instantiate (1 := 0). econstructor; omega. Qed.
 
 Lemma SearchTree'_le:
   forall lo t hi, SearchTree' lo t hi -> lo <= hi.
@@ -412,7 +434,10 @@ Qed.
 
 Lemma insert_SearchTree: forall x vx s,
     SearchTree s -> SearchTree (insert x vx s).
-(* FILL IN HERE *) Admitted.
+Proof.
+  intros. unfold insert. unfold makeBlack.
+  admit.
+Admitted.
 (** [] *)
 
 Import IntMaps.
@@ -436,7 +461,30 @@ Qed.
 Theorem lookup_relate:
   forall k t cts ,   Abs t cts -> lookup k t =  cts (int2Z k).
 Proof.  (* Copy your proof from Extract.v, and adapt it. *)
-(* FILL IN HERE *) Admitted.
+  induction 1.
+  { unfold t_empty. auto. }
+  simpl. unfold t_update, combine. destruct (ltb k k0) eqn:LTB1.
+  - assert (reflect (int2Z k < int2Z k0) (ltb k k0)) by eapply int_blt_reflect.
+    inv H1; cycle 1.
+    { rewrite <- H2 in LTB1. inv LTB1. }
+    bdestruct (int2Z k0=? int2Z k); try omega.
+    bdestruct (int2Z k <? int2Z k0); try omega. eauto.
+  - destruct (ltb k0 k) eqn:LTB2.
+    + assert (reflect (int2Z k0 < int2Z k) (ltb k0 k)) by eapply int_blt_reflect.
+      inv H1; cycle 1.
+      { rewrite <- H2 in LTB2. inv LTB2. }
+      bdestruct (int2Z k0=? int2Z k); try omega.
+      bdestruct (int2Z k <? int2Z k0); try omega. eauto.
+    + assert (reflect (int2Z k < int2Z k0) (ltb k k0)) by eapply int_blt_reflect.
+      inv H1.
+      { rewrite <- H2 in LTB1. inv LTB1. }
+      assert (reflect (int2Z k0 < int2Z k) (ltb k0 k)) by eapply int_blt_reflect.
+      inv H1.
+      { rewrite <- H4 in LTB2. inv LTB2. }
+      rewrite Z.nlt_ge in H5.
+      rewrite Z.nlt_ge in H3.
+      bdestruct (int2Z k0=? int2Z k); try omega. auto.
+Qed.
 (** [] *)
 
 Lemma Abs_helper:
@@ -468,8 +516,19 @@ intros.
 inv H.
 unfold balance.
 repeat match goal with
- | H: Abs E _ |- _ => inv H
-end.
+       | H: Abs E _ |- _ => inv H
+       | H: Abs T _ _ _ _ _ |- _ => inv H
+       | H: SearchTree' _ E _ |- _ => inv H
+       | H: SearchTree' _ (T _ _ _ _ _)  _ |- _ => inv H
+       | |- Abs match ?c with Red => _ | Black => _ end _ => destruct c; eauto
+       | |- Abs match ?s with E => _ | T _ _ _ _ _ => _ end _ => destruct s; eauto
+       | |- Abs (T _ _ _ _ _) _ =>  eapply Abs_T
+       | |- Abs E _=> eapply Abs_E
+       | _ => eassumption
+       | |- _ =>  eapply Abs_helper; [repeat econstructor; eassumption | ]
+       end.
+Admitted.
+
 (** Add these clauses, one at a time, to your [repeat match goal] tactic,
    and try it out:
    -1. Whenever a clause [H: Abs E _] is above the line, invert it by [inv H].
@@ -521,8 +580,6 @@ end.
 
    -Qed! *)
 
-(* FILL IN HERE *) Admitted.
-
 (** Extend this list, so that the nth entry shows how many subgoals
     were remaining after you followed the nth instruction in the list above.
     Your list should be exactly 13 elements long; there was one subgoal 
@@ -540,7 +597,8 @@ Theorem ins_relate:
     SearchTree t ->
     Abs t cts ->
     Abs (ins k v t) (t_update cts (int2Z k) v).
-Proof.  (* Copy your proof from SearchTree.v, and adapt it. 
+Proof.
+(* Copy your proof from SearchTree.v, and adapt it. 
      No need for fancy proof automation. *)
 (* FILL IN HERE *) Admitted.
 (** [] *)
@@ -605,7 +663,49 @@ Theorem elements_relate:
   Abs t cts -> 
   elements_property t cts.
 Proof.
-(* FILL IN HERE *) Admitted.
+unfold elements_property.
+intros until 1. inv H.
+revert cts; induction H0; intros.
+* (* ST_E case *)
+  inv H0. simpl in *. split.
+  intros. inv H0.
+  intros. unfold t_empty in H0. contradiction.
+* (* ST_T case *)
+  admit.
+  Admitted.
+(* inv H. *)
+(* specialize (IHSearchTree'1 _ H5). clear H5. *)
+(* specialize (IHSearchTree'2 _ H6). clear H6. *)
+(* unfold slow_elements; fold slow_elements. *)
+(* subst. *)
+(* extensionality i. *)
+(* destruct (In_decidable (slow_elements l) i)  as [[w H] | Hleft]. *)
+(* rewrite list2map_app_left with (v:=w); auto. *)
+(* pose proof (slow_elements_range _ _ _ _ _ H0_ H). *)
+(* unfold combine, t_update. *)
+(* bdestruct (k=?i); [ omega | ]. *)
+(* bdestruct (i<?k); [ | omega]. *)
+(* auto. *)
+(* simpl. *)
+(* unfold t_update, combine. *)
+(* bdestruct (k=?i); auto. *)
+(* { subst. *)
+(*   eapply list2map_app_right in Hleft. erewrite Hleft. simpl. *)
+(*   unfold t_update. bdestruct (i=?i); try omega. auto. } *)
+
+(* bdestruct (i<?k); cycle 1. *)
+(* { eapply list2map_app_right in Hleft. erewrite Hleft. simpl. *)
+(*   unfold t_update. bdestruct (k=?i); try omega. auto. } *)
+(* destruct (In_decidable (slow_elements r) i). *)
+(* { inv H1. eapply slow_elements_range in H0_0; eauto. omega. } *)
+(* assert (~ (exists v : V, In (i, v) (slow_elements l))) by auto. *)
+(* eapply list2map_app_right in Hleft. erewrite Hleft. simpl. *)
+(* unfold t_update. bdestruct (k=?i); try omega. *)
+(* eapply list2map_app_right with (bl:=[]) in H1. *)
+(* eapply list2map_app_right with (bl:=[]) in H2. *)
+(* rewrite app_nil_r in *. rewrite H1. rewrite H2. auto. Qed. *)
+
+(* (* FILL IN HERE *) Admitted. *)
 (** [] *)
 
 (* ################################################################# *)
@@ -643,13 +743,23 @@ Proof.
 Lemma is_redblack_toblack:
   forall s n, is_redblack s Red n -> is_redblack s Black n.
 Proof.
-(* FILL IN HERE *) Admitted.
+  induction 1.
+  - econstructor.
+  - econstructor; eauto.
+  - econstructor; eauto.
+Qed.
 
 Lemma makeblack_fiddle:
   forall s n, is_redblack s Black n -> 
             exists n, is_redblack (makeBlack s) Red n.
 Proof.
-(* FILL IN HERE *) Admitted.
+  induction 1.
+  - repeat econstructor.
+  - repeat econstructor.
+    eapply is_redblack_toblack; eauto.
+    eapply is_redblack_toblack; eauto.
+  - repeat econstructor; eauto. Qed.
+
 
 (** [nearly_redblack] expresses, "the tree is a red-black tree, except that
   it's nonempty and it is permitted to have two red nodes in a row at 
@@ -679,19 +789,33 @@ specialize (H0 H6).
 specialize (H2 H7).
 clear H H1.
 unfold balance.
+destruct (ltb x k) eqn:LTB1.
+{ repeat econstructor; eauto.
+  eapply is_redblack_toblack; eauto. }
+destruct (ltb k x) eqn:LTB2.
+{ repeat econstructor; eauto.
+  eapply is_redblack_toblack; eauto. }
+admit. (* contradiction *)
+*
+destruct (ltb x k) eqn:LTB1.
+{ simpl. admit. }
+destruct (ltb k x) eqn:LTB2.
+{ simpl. admit. }
+admit. (* contradiction *)
+Admitted.
 
 (** You will need proof automation, in a similar style to
    the proofs of [ins_not_E] and [balance_relate]. *)
-
-(* FILL IN HERE *) Admitted.
 
 Lemma insert_is_redblack:
   forall x xv s n, is_redblack s Red n ->
                     exists n', is_redblack (insert x xv s) Red n'.
 Proof.
+  intros. unfold insert. eapply makeblack_fiddle.
+  eapply ins_is_redblack. eauto. Qed.
   (* Just apply a couple of lemmas: 
      ins_is_redblack and makeblack_fiddle *)
-(* FILL IN HERE *) Admitted.
+
 (** [] *)
 
 End TREES.
